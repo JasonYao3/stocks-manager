@@ -1,4 +1,4 @@
-# Stock Manager
+# Stocks Manager
 
 Stock portfolio manager built with Flask
 
