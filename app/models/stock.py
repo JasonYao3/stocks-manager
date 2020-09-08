@@ -1,8 +1,8 @@
-import csv
 import uuid
 from typing import Dict, List
 from wallstreet import Stock as WS
 from app.models.stock_info import StockInfo
+
 
 class Stock:
 
@@ -36,7 +36,7 @@ class Stock:
         return WS(upper_stock_symbol).price
 
     @classmethod
-    def get_yield_of_single_stock(cls, stock) -> List:
+    def get_yield_of_single_stock(cls, stock) -> Dict:
         num_of_shares = stock.shares
         stock_symbol = stock.stock_symbol
         purchase_price = stock.purchase_price
@@ -52,13 +52,13 @@ class Stock:
                     total_value=round(total_value, 2))
 
     @classmethod
-    def get_total(self, stocks):
+    def get_total(cls, stocks):
         quantity = 0
         value = 0
         profit_loss = 0
 
         for stock in stocks:
-            stock_yeild = self.get_yield_of_single_stock(stock)
+            stock_yeild = cls.get_yield_of_single_stock(stock)
 
             quantity += stock.shares
             value += stock_yeild['total_value']

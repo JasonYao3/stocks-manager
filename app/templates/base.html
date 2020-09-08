@@ -31,8 +31,7 @@
                 <div class="collapse navbar-collapse" id="navcol-1">
 
                     <ul class="nav navbar-nav ml-auto">
-                        {% if current_user.is_authenticated %}
-
+                        {% if g.user %}
                             <li class="nav-item" role="presentation" style="padding-right: 4px;">
                                 <a class="nav-link text-capitalize text-white" href="{{ url_for('stocks.logout') }}">
                                     Logout

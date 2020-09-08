@@ -90,6 +90,11 @@ nav {
     background: transparent;
     color: #ff4846;
     outline: none;
+    opacity: 0.6;
+}
+
+#trash-btn:hover {
+    opacity: 1;
 }
 
 td.val.r {
@@ -129,4 +134,18 @@ td.val.g {
 .block-heading {
     margin-top: 40px;
 }
+
+.btn-outline-light:not(:disabled):not(.disabled).active:focus, .btn-outline-light:not(:disabled):not(.disabled):active:focus, .show > .btn-outline-light.dropdown-toggle:focus {
+  box-shadow: 0 0 0 .2rem rgba(248,249,250,.5);
+}
+
+body, html {
+  background-color: #264653;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
 

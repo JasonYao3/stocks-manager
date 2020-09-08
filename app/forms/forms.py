@@ -1,8 +1,6 @@
-import csv
 from flask_wtf import FlaskForm
-from wtforms.validators import DataRequired, Length, Email, EqualTo, Regexp, InputRequired, ValidationError
-from wtforms import StringField, PasswordField, SubmitField, IntegerField, BooleanField
-from app.database.database import User
+from wtforms.validators import InputRequired, ValidationError
+from wtforms import StringField, SubmitField, IntegerField
 from app.models.stock_info import StockInfo
 
 
@@ -26,42 +24,3 @@ class AddStockForm(FlaskForm):
     num_of_shares = IntegerField('Number of Shares',
                                  validators=[InputRequired(), validate_input_isnumeric])
     submit = SubmitField('Add Stock')
-
-
-class LoginForm(FlaskForm):
-    email = StringField('Email*', validators=[DataRequired(), Email()])
-    password = PasswordField('Password', validators=[DataRequired()])
-    remember = BooleanField('Remember Me')
-    submit = SubmitField('Login')
-
-
-class RegistrationsForm(FlaskForm):
-    email = StringField('Email*', validators=[DataRequired(), Email()])
-    password = PasswordField('Password*', validators=[DataRequired(), Length(min=5, max=20)])
-    confirm_password = PasswordField('Confirm password*',
-                                     validators=[DataRequired(), Length(min=5, max=20),
-                                                 EqualTo('password', message='Passwords must match')])
-    submit = SubmitField('Sign Up')
-
-    def validate_email(self, email):
-        user = User.query.filter_by(email=email.data).first()
-        if user:
-            raise ValidationError('Email already in use')
-
-
-class RequestResetForm(FlaskForm):
-    email = StringField('Email*', validators=[DataRequired(), Email()])
-    submit = SubmitField('Request new password')
-
-    def validate_email(self, email):
-        user = User.query.filter_by(email=email.data).first()
-        if user is None:
-            raise ValidationError('There is no account associated with this email address')
-
-
-class ResetPasswordForm(FlaskForm):
-    password = PasswordField('Password*', validators=[DataRequired(), Length(min=5, max=20)])
-    confirm_password = PasswordField('Confirm password*',
-                                     validators=[DataRequired(), Length(min=5, max=20),
-                                                 EqualTo('password', message='Passwords must match')])
-    submit = SubmitField('Reset password')
