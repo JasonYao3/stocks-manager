@@ -2,25 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a7f6c87a-af6c-4b95-bd0d-a812818c470a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/database/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/database/database.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/forms/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/forms/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/stock.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/stock.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/routes/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/routes.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/site.database" beforeDir="false" afterPath="$PROJECT_DIR$/app/site.database" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/assets/css/untitled-1.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/assets/css/untitled.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/css/untitled.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/materialize.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/static/assets/css/untitled.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/static/assets/img/avatars/avatar1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/static/assets/img/avatars/avatar2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/static/assets/img/avatars/avatar3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/static/assets/img/scenery/image1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/static/assets/img/scenery/image4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/static/assets/img/scenery/image5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/static/assets/img/scenery/image6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/static/assets/img/scenery/webServiceIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/static/assets/img/tech/image4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/static/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/stocks/body base.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/stocks/contact-us.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/stocks/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/stocks/register.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/stocks/reset.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/stocks/about-us.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/stocks/about-us.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/stocks/table.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/stocks/table.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/run.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,6 +29,20 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="FavoritesManager">
     <favorites_list name="stocks protfolio manager" />
@@ -44,6 +59,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/app/templates/base.html" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/../Cheat Sheet.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/app/routes/routes.py" root0="SKIP_INSPECTION" />
     <setting file="file://$USER_HOME$/Documents/Text/צ'אט WhatsApp עם מאמי&#10;3.txt" root0="SKIP_HIGHLIGHTING" />
@@ -64,10 +80,11 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="run.code.analysis.last.selected.profile" value="aDefault" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.flask.configuration.FlaskConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/static/assets/js" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -221,7 +238,8 @@
       <workItem from="1598023861024" duration="17878000" />
       <workItem from="1598550510658" duration="10824000" />
       <workItem from="1598864885069" duration="6053000" />
-      <workItem from="1599578421095" duration="3029000" />
+      <workItem from="1599578421095" duration="18352000" />
+      <workItem from="1600188897135" duration="9618000" />
     </task>
     <servers />
   </component>
@@ -250,12 +268,12 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="698" y="416" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1598023685062" />
-    <state x="469" y="179" key="SettingsEditor" timestamp="1598023640674">
+    <state x="469" y="179" key="SettingsEditor" timestamp="1600188874849">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="469" y="179" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1598023640674" />
+    <state x="469" y="179" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1600188874849" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/stocks_protfolio_manager$run.coverage" NAME="run Coverage Results" MODIFIED="1599581141221" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/stocks_protfolio_manager$run.coverage" NAME="run Coverage Results" MODIFIED="1600339089198" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

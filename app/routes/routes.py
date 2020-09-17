@@ -1,3 +1,4 @@
+import requests
 from app.models.stock import Stock
 from app.forms.forms import AddStockForm
 from app.database.database import StockDb
@@ -11,18 +12,19 @@ stocks_blueprint = Blueprint('stocks', __name__)
 def before_request():
     if oidc.user_loggedin:
         g.user = okta_client.get_user(oidc.user_getfield("sub"))
+
     else:
         g.user = None
 
 
 @stocks_blueprint.route('/main', methods=['GET', 'POST'])
 @oidc.require_login
-def table():
+def main():
     stocks = StockDb.query.all()
     total = Stock.get_total(stocks)
     form = AddStockForm()
 
-    if request.method == 'POST':
+    if request.method == 'POST' and form.validate_on_submit():
         stock_symbol = request.form['stock_symbol']
         num_of_shares = request.form['num_of_shares']
         purchase_price = request.form['purchase_price']
@@ -45,7 +47,7 @@ def table():
         db.session.commit()
 
         flash(f'{stock_symbol.upper()} stock was added successfully', 'alert-success')
-        return redirect(url_for('stocks.table'))
+        return redirect(url_for('stocks.main'))
 
     return render_template('stocks/table.html', stocks=stocks, Stock=Stock, total=total, form=form)
 
@@ -53,7 +55,7 @@ def table():
 @stocks_blueprint.route('/login', methods=['GET', 'POST'])
 @oidc.require_login
 def login():
-    return redirect(url_for('stocks.table'))
+    return redirect(url_for('stocks.main'))
 
 
 @stocks_blueprint.route('/register', methods=['GET', 'POST'])
@@ -68,10 +70,10 @@ def remove_stock():
         stock_id = request.form['stock_id']
         StockDb.query.filter_by(id=stock_id).delete()
         db.session.commit()
-        return redirect(url_for('stocks.table'))
+        return redirect(url_for('stocks.main'))
 
 
-@stocks_blueprint.route('/logout')
+@stocks_blueprint.route('/logout', methods=['POST', 'GET'])
 def logout():
     oidc.logout()
     return redirect(url_for('stocks.index'))
@@ -79,9 +81,19 @@ def logout():
 
 @app.route('/')
 def base():
-    return redirect("/stocks/table", code=302)
+    return redirect("/stocks/main", code=302)
 
 
 @stocks_blueprint.route('/index', methods=['POST', 'GET'])
 def index():
     return render_template('stocks/index.html')
+
+
+@stocks_blueprint.route('/puppy/<name>')
+def puppy(name):
+    return f'<h1>{name} is a cute puppy!</h1>'
+
+
+@stocks_blueprint.route('/test_table')
+def test_table():
+    pass

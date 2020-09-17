@@ -12,7 +12,3 @@ class StockDb(db.Model):
 
     def __repr__(self):
         return f'Stock symbol: {self.stock_symbol}, Shares: {self.shares}, Purchase price: {self.purchase_price}'
-
-
-
-

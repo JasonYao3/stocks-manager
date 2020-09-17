@@ -37,7 +37,7 @@
 }
 
 thead {
-    background-color: #15616d;
+    background-color: #253f47;
     border: 32px;
     font-style: normal;
 }
@@ -140,7 +140,7 @@ td.val.g {
 }
 
 body, html {
-  background-color: #264653;
+  background-color: #33424f;
 }
 
 html, body {
@@ -148,4 +148,11 @@ html, body {
   width: 100%;
 }
 
+#add-stock-btn-div {
+    padding-bottom: 500px;
+}
+
+.total{
+    pointer-events: none;
+}
 

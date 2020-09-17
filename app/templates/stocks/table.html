@@ -3,7 +3,7 @@
     <div class="card portfolio-table" id="table-card"
          style="border-width: 0; background-color: rgba(255, 255, 255, 0);">
         <div class="card-body text-center"
-             style="box-shadow: 0 0 9px rgba(0, 0, 0, 0.42); border-radius: 8px; background-color: #287271; margin-top: 0;">
+             style="box-shadow: 0 0 9px rgba(0, 0, 0, 0.42); background-color: #3e5160; margin-top: 0;">
             <div>
                 {% if stocks|length < 1 %}
                     <div class="alert alert-success" role="alert" id="add-stocks-alert">
@@ -12,7 +12,8 @@
                         <p>Click on the Add Stocks button to start your portfolio</p>
                     </div>
                 {% else %}
-                    <h1 style="color: rgb(255, 250, 246);">Your portfolio</h1>
+                    <h1 style="color: rgb(255, 250, 246);">Your portfolio</h1
+
 
                     </div>
                     <div class="table-responsive">
@@ -73,17 +74,17 @@
                     </div>
 
                 {% endif %}
-            <div>
+            <div id="add-stock-btn-div">
                 <button class="btn btn-light text-dark" data-toggle="modal"
-                        data-target="#exampleModal" type="submit">
+                        data-target="#add-stock-modal" type="submit">
                     Add Stock
                 </button>
             </div>
 
             <div style="text-align: right;">
                 <div class="text-center" id="modal-open">
-                    <div class="modal fade" role="dialog" tabindex="-1" id="exampleModal"
-                         aria-labelledby="exampleModalLabel">
+                    <div class="modal fade" role="dialog" tabindex="-1" id="add-stock-modal"
+                         aria-labelledby="add-stock-modalLabel">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
